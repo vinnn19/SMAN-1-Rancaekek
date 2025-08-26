@@ -1,0 +1,221 @@
+body {
+    background:linear-gradient(to bottom, #0b125B);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 40px;
+}
+
+.Logo img{
+    width: 50px;
+    height: auto;
+}
+
+.Logo h1 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(197, 178, 73)
+}
+
+.Navbar {
+    margin-right: 50px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+nav ul li {
+    margin: 15px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: rgb(197, 178, 73);
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: rgb(197, 178, 73);
+}
+
+.Prestasi{
+    margin-top: 200px;
+    background-color: rgb(197, 178, 73);
+    color: white;
+    width: 100%;
+    height: 100px;
+}
+
+.Prestasi h1{
+    text-align: center;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 1000;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.card-group {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0 20px;
+    
+}
+
+.card {
+    width: 100%;
+    height: 560px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-left: auto;
+    box-shadow: px 10px 15px rgba(245, 238, 102, 0.6);
+    border-radius: 15px;
+        box-shadow: 10px 10px 15px rgba(255, 235, 15, 0.6),
+                0 0 10px rgba(255, 235, 15, 0.6);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transition: 0.5s;
+    display: block;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .card-group {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    
+    .card {
+        height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-group {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .card {
+        height: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-group {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .card {
+        height: 350px;
+        max-width: 320px;
+    }
+}
+
+.card .layer {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.650), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card .info {
+    position: absolute;
+    bottom: -50%;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.5s bottom, 1.75s opacity;
+}
+
+.info p {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.card:hover,
+.card:hover img,
+.card:hover layer {
+    transform: scale(1.1);
+}
+
+.card:hover > .layer {
+    opacity: 1;
+}
+
+.card:hover > .info {
+    bottom: 0;
+    opacity: 1;
+}
+
+.card-group:hover > .card:not(:hover) {
+    filter: blur(5px);
+}

@@ -1,0 +1,206 @@
+/* Header */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
+body {
+    background-color: #0B125B;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+.Logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Logo img{
+    width: 50px;
+    height: auto;
+}
+
+.Logo h1 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(197, 178, 73);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 15px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: rgb(197, 178, 73);
+}
+
+.main-content {
+    width: 500px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 120px;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-right: 600px;
+    padding: 0 10%;
+    margin-top: 80px;
+    background: url("PROJECT WEB UNTUK LOMBA/FASILITAS2.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 600px;
+    color: white;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+}
+
+.home-content h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: white;
+}
+
+/* Facilities Styles */
+.facilities-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-shadow: 0 0 5px rgba(197, 178, 73, 0.8),
+                 0 0 10px rgba(197, 178, 73, 0.6),
+                 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.facility {
+    margin-top: 100px;
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-shadow: 0 0 5px rgba(197, 178, 73, 0.8),
+                 0 0 10px rgba(197, 178, 73, 0.6),
+                 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.facility img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    text-shadow: 0 0 5px rgba(197, 178, 73, 0.8),
+                 0 0 10px rgba(197, 178, 73, 0.6),
+                 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.facility-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 30px;
+    color: white;
+    text-shadow: 0 0 5px rgba(197, 178, 73, 0.8),
+                 0 0 10px rgba(197, 178, 73, 0.6),
+                 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.facility h2 {
+    color: rgb(197, 178, 73);
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 5px rgba(197, 178, 73, 0.8),
+                 0 0 10px rgba(197, 178, 73, 0.6),
+                 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+
+@media (max-width: 768px) {
+    .facility {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .facility img {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .home-content h2 {
+        font-size: 36px;
+    }
+    
+    header {
+        padding: 15px 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 10px;
+    }
+}
+
+
+
